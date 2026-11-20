@@ -45,7 +45,6 @@ GD32F130-based STS3215 サーボ用ファームウェア。モーターを制御
 <a id="how-extension-mode-works"></a>
 ## 拡張モードの仕組み
 
-[録画された概要を YouTube でご覧ください](https://youtu.be/AsxFs24vXQs) | [MP4](../../../assets/readme/videos/overview.mp4)
 
 **ホスト** は、サーボに接続されているコンピューターまたはコントローラーです。 **ターゲット**: 目的地と制限速度を送信します。加速と補償の設定は、モーター電力を有効にする前に構成されます。各サーボは次のようになります。
 
@@ -73,9 +72,7 @@ GD32F130-based STS3215 サーボ用ファームウェア。モーターを制御
 <a id="s-curve-motion"></a>
 ## S-curveモーション
 
-[![s-curveモーション](../../../assets/readme/illustrations/s-curve.png)](https://youtu.be/92mDt4rbobY)の概念図
 
-[YouTubeで見る](https://youtu.be/92mDt4rbobY) | [MP4](../../../assets/readme/videos/s-curve.mp4)
 
 加速とブレーキをより緩やかにします。曲線は時間の経過に伴う加速を示しています。概念図であり、測定されたハードウェア データではありません。
 
@@ -147,9 +144,7 @@ jerk = 1000 × acceleration / ramp_time_ms    [counts/s³]
 <a id="pid-controller"></a>
 ## PIDコントローラー
 
-[![pid 制御の概念図](../../../assets/readme/illustrations/pid-tuning.png)](https://youtu.be/TEpvaAMlfrg)
 
-[YouTubeで見る](https://youtu.be/TEpvaAMlfrg) | [MP4](../../../assets/readme/videos/pid-tuning.mp4)
 
 サーボによる位置誤差の補正方法を調整します。灰色の曲線は振動を示しています。白い曲線は、より減衰した応答を示しています。破線がターゲットです。概念図であり、測定されたハードウェア データではありません。
 
@@ -188,9 +183,7 @@ I の貢献には独自の制限があります。また、コントローラー
 <a id="velocity-feedforward"></a>
 ## 速度フィードフォワード
 
-[![速度フィードフォワードの概念図](../../../assets/readme/illustrations/velocity-feedforward.png)](https://youtu.be/osGGs-nhk9I)
 
-[YouTubeで見る](https://youtu.be/osGGs-nhk9I) | [MP4](../../../assets/readme/videos/velocity-feedforward.mp4)
 
 サーボ内部で計算された計画速度に基づいてモーター出力を加算します。どちらの曲線も時間の経過とともに左から右に進みます。概念図であり、測定されたハードウェア データではありません。
 
@@ -209,9 +202,7 @@ velocity feedforward = velocity gain × planned speed
 <a id="gravity-compensation"></a>
 ## 重力補正
 
-[![重力補正の概念図](../../../assets/readme/illustrations/gravity-compensation.png)](https://youtu.be/25sc41PTDIA)
 
-[YouTubeで見る](https://youtu.be/25sc41PTDIA) | [MP4](../../../assets/readme/videos/gravity-compensation.mp4)
 
 ホストが寄与を計算し、サーボがそれを適用します。下向きの矢印は重量を表します。上向きの矢印はサポートを表します。概念図であり、測定されたハードウェア データではありません。
 
@@ -517,9 +508,7 @@ make verify
 <a id="current-limits"></a>
 ## 電流制限
 
-[![ギアボックスのバックラッシュとフレームのフレックス](../../../assets/readme/posters/mechanical-limits.jpg)](https://youtu.be/53l7at5aE6k)
 
-[YouTubeで見る](https://youtu.be/53l7at5aE6k) | [MP4](../../../assets/readme/videos/mechanical-limits.mp4)
 
 拡張フィードバックを通じて報告された温度は、孤立したジャンプを抑制するためにチェックされますが、モーターの温度保護では依然として生のセンサー読み取り値が使用されます。これは、たとえそれが拡張機能のフィードバックから除外されたとしても、短時間の不正な読み取りが保護に影響を与える可能性があることを意味します。
 

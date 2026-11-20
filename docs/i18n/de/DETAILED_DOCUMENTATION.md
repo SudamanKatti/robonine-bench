@@ -45,7 +45,6 @@ Die Erweiterung verwendet ihre eigenen Bewegungs- und Steuerungseinstellungen. V
 <a id="how-extension-mode-works"></a>
 ## So funktioniert der Erweiterungsmodus
 
-[Sehen Sie sich die aufgezeichnete Übersicht auf YouTube an](https://youtu.be/AsxFs24vXQs) | [MP4](../../../assets/readme/videos/overview.mp4)
 
 Der **Host** ist der Computer oder Controller, der mit den Servos verbunden ist. Es sendet ein **Ziel**: ein Ziel und eine Geschwindigkeitsbegrenzung. Beschleunigungs- und Kompensationseinstellungen werden vor der Aktivierung der Motorleistung konfiguriert. Jedes Servo dann:
 
@@ -73,9 +72,7 @@ Der Aufwand wird in PWM-Einheiten ausgedrückt, den Einheiten, die zur Steuerung
 <a id="s-curve-motion"></a>
 ## S-curve Bewegung
 
-[![Konzeptionelle Darstellung von s-curve Bewegung](../../../assets/readme/illustrations/s-curve.png)](https://youtu.be/92mDt4rbobY)
 
-[Auf YouTube ansehen](https://youtu.be/92mDt4rbobY) | [MP4](../../../assets/readme/videos/s-curve.mp4)
 
 Sorgt für sanfteres Beschleunigen und Bremsen. Die Kurve veranschaulicht die Beschleunigung über die Zeit. Konzeptionelle Darstellung, keine gemessenen Hardwaredaten.
 
@@ -147,9 +144,7 @@ Für eine neue SO-101- oder SO-102-Kalibrierung verwenden Sie die abgebildeten G
 <a id="pid-controller"></a>
 ## PID Controller
 
-[![Konzeptionelle Darstellung der PID-Regelung](../../../assets/readme/illustrations/pid-tuning.png)](https://youtu.be/TEpvaAMlfrg)
 
-[Auf YouTube ansehen](https://youtu.be/TEpvaAMlfrg) | [MP4](../../../assets/readme/videos/pid-tuning.mp4)
 
 Passt an, wie das Servo Positionsfehler korrigiert. Die graue Kurve veranschaulicht die Schwingung; Die weiße Kurve zeigt eine gedämpftere Reaktion. Die gestrichelte Linie ist das Ziel. Konzeptionelle Darstellung, keine gemessenen Hardwaredaten.
 
@@ -188,9 +183,7 @@ Wenn der Servo mindestens 50 ms nahezu stationär war und der Positionsfehler in
 <a id="velocity-feedforward"></a>
 ## Geschwindigkeitsvorsteuerung
 
-[![Konzeptionelle Darstellung der Geschwindigkeitsvorsteuerung](../../../assets/readme/illustrations/velocity-feedforward.png)](https://youtu.be/osGGs-nhk9I)
 
-[Auf YouTube ansehen](https://youtu.be/osGGs-nhk9I) | [MP4](../../../assets/readme/videos/velocity-feedforward.mp4)
 
 Addiert die Motorleistung basierend auf der geplanten Geschwindigkeit, die im Servo berechnet wird. Beide Kurven verlaufen im Zeitverlauf von links nach rechts. Konzeptionelle Darstellung, keine gemessenen Hardwaredaten.
 
@@ -209,9 +202,7 @@ Konfigurieren Sie diese Funktion zusammen mit den anderen Einstellungen in `0xA0
 <a id="gravity-compensation"></a>
 ## Schwerkraftkompensation
 
-[![Konzeptionelle Darstellung der Schwerkraftkompensation](../../../assets/readme/illustrations/gravity-compensation.png)](https://youtu.be/25sc41PTDIA)
 
-[Auf YouTube ansehen](https://youtu.be/25sc41PTDIA) | [MP4](../../../assets/readme/videos/gravity-compensation.mp4)
 
 Der Host berechnet den Beitrag und der Servo wendet ihn an. Der Abwärtspfeil stellt das Gewicht dar; Der Aufwärtspfeil steht für Unterstützung. Konzeptionelle Darstellung, keine gemessenen Hardwaredaten.
 
@@ -517,9 +508,7 @@ Einzelheiten zur Implementierung finden Sie in den [Erweiterungsbefehlen](../../
 <a id="current-limits"></a>
 ## Aktuelle Grenzwerte
 
-[![Getriebespiel und Rahmenflex](../../../assets/readme/posters/mechanical-limits.jpg)](https://youtu.be/53l7at5aE6k)
 
-[Auf YouTube ansehen](https://youtu.be/53l7at5aE6k) | [MP4](../../../assets/readme/videos/mechanical-limits.mp4)
 
 Die über die Erweiterungsrückmeldung gemeldete Temperatur wird überprüft, um isolierte Sprünge zu unterdrücken, der Temperaturschutz des Motors verwendet jedoch weiterhin die Rohsensorwerte. Dies bedeutet, dass ein kurzzeitiger schlechter Messwert den Schutz beeinträchtigen kann, selbst wenn er aus dem Erweiterungs-Feedback herausgefiltert wird.
 

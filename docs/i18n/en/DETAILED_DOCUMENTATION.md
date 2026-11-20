@@ -45,7 +45,6 @@ The extension uses its own motion and control settings. Gain values should not b
 <a id="how-extension-mode-works"></a>
 ## How extension mode works
 
-[Watch the recorded overview on YouTube](https://youtu.be/AsxFs24vXQs) | [MP4](../../../assets/readme/videos/overview.mp4)
 
 The **host** is the computer or controller connected to the servos. It sends a **target**: a destination and speed limit. Acceleration and compensation settings are configured before enabling motor power. Each servo then:
 
@@ -73,9 +72,7 @@ Effort is expressed in PWM units, the units used to control electrical output to
 <a id="s-curve-motion"></a>
 ## S-curve motion
 
-[![Conceptual illustration of s-curve motion](../../../assets/readme/illustrations/s-curve.png)](https://youtu.be/92mDt4rbobY)
 
-[Watch on YouTube](https://youtu.be/92mDt4rbobY) | [MP4](../../../assets/readme/videos/s-curve.mp4)
 
 Makes acceleration and braking more gradual. The curve illustrates acceleration over time. Conceptual illustration, not measured hardware data.
 
@@ -147,9 +144,7 @@ Open an image for a larger view. Follow the [calibration guide](tools/settings/R
 <a id="pid-controller"></a>
 ## PID controller
 
-[![Conceptual illustration of pid control](../../../assets/readme/illustrations/pid-tuning.png)](https://youtu.be/TEpvaAMlfrg)
 
-[Watch on YouTube](https://youtu.be/TEpvaAMlfrg) | [MP4](../../../assets/readme/videos/pid-tuning.mp4)
 
 Adjusts how the servo corrects position error. The gray curve illustrates oscillation; the white curve illustrates a more damped response. The dashed line is the target. Conceptual illustration, not measured hardware data.
 
@@ -188,9 +183,7 @@ When the servo has been nearly stationary for at least 50 ms and the position er
 <a id="velocity-feedforward"></a>
 ## Velocity feedforward
 
-[![Conceptual illustration of velocity feedforward](../../../assets/readme/illustrations/velocity-feedforward.png)](https://youtu.be/osGGs-nhk9I)
 
-[Watch on YouTube](https://youtu.be/osGGs-nhk9I) | [MP4](../../../assets/readme/videos/velocity-feedforward.mp4)
 
 Adds motor output based on planned speed, calculated inside the servo. Both curves progress from left to right over time. Conceptual illustration, not measured hardware data.
 
@@ -209,9 +202,7 @@ Configure this feature together with the other settings in `0xA0`, while motor p
 <a id="gravity-compensation"></a>
 ## Gravity compensation
 
-[![Conceptual illustration of gravity compensation](../../../assets/readme/illustrations/gravity-compensation.png)](https://youtu.be/25sc41PTDIA)
 
-[Watch on YouTube](https://youtu.be/25sc41PTDIA) | [MP4](../../../assets/readme/videos/gravity-compensation.mp4)
 
 The host calculates the contribution and the servo applies it. The downward arrow represents weight; the upward arrow represents support. Conceptual illustration, not measured hardware data.
 
@@ -517,9 +508,7 @@ For implementation details, see the [extension commands](../../../firmware/app/a
 <a id="current-limits"></a>
 ## Current limits
 
-[![Gearbox backlash and frame flex](../../../assets/readme/posters/mechanical-limits.jpg)](https://youtu.be/53l7at5aE6k)
 
-[Watch on YouTube](https://youtu.be/53l7at5aE6k) | [MP4](../../../assets/readme/videos/mechanical-limits.mp4)
 
 Temperature reported through extension feedback is checked to suppress isolated jumps, but the motor's temperature protection still uses the raw sensor readings. This means a brief bad reading can affect protection even if it is filtered out of extension feedback.
 

@@ -45,7 +45,6 @@ La extensión utiliza su propia configuración de movimiento y control. Los valo
 <a id="how-extension-mode-works"></a>
 ## Cómo funciona el modo de extensión
 
-[Vea la descripción general grabada en YouTube](https://youtu.be/AsxFs24vXQs) | [MP4](../../../assets/readme/videos/overview.mp4)
 
 El **host** es la computadora o controlador conectado a los servos. Envía un **objetivo**: un destino y un límite de velocidad. Los ajustes de aceleración y compensación se configuran antes de habilitar la potencia del motor. Cada servo entonces:
 
@@ -73,9 +72,7 @@ El esfuerzo se expresa en unidades PWM, las unidades utilizadas para controlar l
 <a id="s-curve-motion"></a>
 ## S-curve movimiento
 
-[![Ilustración conceptual de s-curve movimiento](../../../assets/readme/illustrations/s-curve.png)](https://youtu.be/92mDt4rbobY)
 
-[Ver en YouTube](https://youtu.be/92mDt4rbobY) | [MP4](../../../assets/readme/videos/s-curve.mp4)
 
 Hace que la aceleración y el frenado sean más graduales. La curva ilustra la aceleración en el tiempo. Ilustración conceptual, datos de hardware no medidos.
 
@@ -147,9 +144,7 @@ Abra una imagen para verla más grande. Siga la [guía de calibración](tools/se
 <a id="pid-controller"></a>
 ## PID controlador
 
-[![Ilustración conceptual del control pid](../../../assets/readme/illustrations/pid-tuning.png)](https://youtu.be/TEpvaAMlfrg)
 
-[Ver en YouTube](https://youtu.be/TEpvaAMlfrg) | [MP4](../../../assets/readme/videos/pid-tuning.mp4)
 
 Ajusta cómo el servo corrige el error de posición. La curva gris ilustra la oscilación; la curva blanca ilustra una respuesta más amortiguada. La línea discontinua es el objetivo. Ilustración conceptual, datos de hardware no medidos.
 
@@ -188,9 +183,7 @@ Cuando el servo lleva al menos 50 ms casi inmóvil y el error de posición no su
 <a id="velocity-feedforward"></a>
 ## avance de velocidad
 
-[![Ilustración conceptual de avance de velocidad](../../../assets/readme/illustrations/velocity-feedforward.png)](https://youtu.be/osGGs-nhk9I)
 
-[Ver en YouTube](https://youtu.be/osGGs-nhk9I) | [MP4](../../../assets/readme/videos/velocity-feedforward.mp4)
 
 Agrega salida del motor según la velocidad planificada, calculada dentro del servo. Ambas curvas progresan de izquierda a derecha a lo largo del tiempo. Ilustración conceptual, datos de hardware no medidos.
 
@@ -209,9 +202,7 @@ Configure esta función junto con las otras configuraciones en `0xA0`, mientras 
 <a id="gravity-compensation"></a>
 ## Compensación de gravedad
 
-[![Ilustración conceptual de compensación de gravedad](../../../assets/readme/illustrations/gravity-compensation.png)](https://youtu.be/25sc41PTDIA)
 
-[Ver en YouTube](https://youtu.be/25sc41PTDIA) | [MP4](../../../assets/readme/videos/gravity-compensation.mp4)
 
 El anfitrión calcula la contribución y el servo la aplica. La flecha hacia abajo representa el peso; la flecha hacia arriba representa el soporte. Ilustración conceptual, datos de hardware no medidos.
 
@@ -517,9 +508,7 @@ Para obtener detalles de implementación, consulte los [comandos de extensión](
 <a id="current-limits"></a>
 ## Límites actuales
 
-[![Juego de la caja de cambios y flexión del marco](../../../assets/readme/posters/mechanical-limits.jpg)](https://youtu.be/53l7at5aE6k)
 
-[Ver en YouTube](https://youtu.be/53l7at5aE6k) | [MP4](../../../assets/readme/videos/mechanical-limits.mp4)
 
 La temperatura reportada a través de la retroalimentación de extensión se verifica para suprimir saltos aislados, pero la protección de temperatura del motor aún usa las lecturas sin procesar del sensor. Esto significa que una breve mala lectura puede afectar la protección incluso si se filtra de los comentarios de la extensión.
 

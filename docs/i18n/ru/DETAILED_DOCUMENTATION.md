@@ -45,7 +45,6 @@
 <a id="how-extension-mode-works"></a>
 ## Как работает режим расширения
 
-[Посмотрите записанный обзор на YouTube](https://youtu.be/AsxFs24vXQs) | [MP4](../../../assets/readme/videos/overview.mp4)
 
 **Хост** — это компьютер или контроллер, подключенный к сервоприводам. Он отправляет **target**: пункт назначения и ограничение скорости. Настройки ускорения и компенсации настраиваются до включения питания двигателя. Затем каждый сервопривод:
 
@@ -73,9 +72,7 @@
 <a id="s-curve-motion"></a>
 ## S-curve движение
 
-[![Концептуальная иллюстрация движения s-curve](../../../assets/readme/illustrations/s-curve.png)](https://youtu.be/92mDt4rbobY)
 
-[Смотреть на YouTube](https://youtu.be/92mDt4rbobY) | [MP4](../../../assets/readme/videos/s-curve.mp4)
 
 Делает ускорение и торможение более плавными. Кривая иллюстрирует ускорение с течением времени. Концептуальная иллюстрация, а не измеренные аппаратные данные.
 
@@ -147,9 +144,7 @@ jerk = 1000 × acceleration / ramp_time_ms    [counts/s³]
 <a id="pid-controller"></a>
 ## PID контроллер
 
-[![Концептуальная иллюстрация пид-регулирования](../../../assets/readme/illustrations/pid-tuning.png)](https://youtu.be/TEpvaAMlfrg)
 
-[Смотреть на YouTube](https://youtu.be/TEpvaAMlfrg) | [MP4](../../../assets/readme/videos/pid-tuning.mp4)
 
 Регулирует, как сервопривод исправляет ошибку положения. Серая кривая иллюстрирует колебания; белая кривая иллюстрирует более затухающий отклик. Пунктирная линия — это цель. Концептуальная иллюстрация, а не измеренные аппаратные данные.
 
@@ -188,9 +183,7 @@ motor output = Kp × position error
 <a id="velocity-feedforward"></a>
 ## Прямая связь по скорости
 
-[![Концептуальная иллюстрация прямой связи по скорости](../../../assets/readme/illustrations/velocity-feedforward.png)](https://youtu.be/osGGs-nhk9I)
 
-[Смотреть на YouTube](https://youtu.be/osGGs-nhk9I) | [MP4](../../../assets/readme/videos/velocity-feedforward.mp4)
 
 Добавляет мощность двигателя на основе запланированной скорости, рассчитанной внутри сервопривода. Обе кривые со временем продвигаются слева направо. Концептуальная иллюстрация, а не измеренные аппаратные данные.
 
@@ -209,9 +202,7 @@ velocity feedforward = velocity gain × planned speed
 <a id="gravity-compensation"></a>
 ## Компенсация гравитации
 
-[![Концептуальная иллюстрация компенсации гравитации](../../../assets/readme/illustrations/gravity-compensation.png)](https://youtu.be/25sc41PTDIA)
 
-[Смотреть на YouTube](https://youtu.be/25sc41PTDIA) | [MP4](../../../assets/readme/videos/gravity-compensation.mp4)
 
 Хост рассчитывает вклад, и сервопривод применяет его. Стрелка вниз обозначает вес; стрелка вверх представляет поддержку. Концептуальная иллюстрация, а не измеренные аппаратные данные.
 
@@ -517,9 +508,7 @@ make verify
 <a id="current-limits"></a>
 ## Текущие лимиты
 
-[![Люфт коробки передач и прогиб рамы](../../../assets/readme/posters/mechanical-limits.jpg)](https://youtu.be/53l7at5aE6k)
 
-[Смотреть на YouTube](https://youtu.be/53l7at5aE6k) | [MP4](../../../assets/readme/videos/mechanical-limits.mp4)
 
 Температура, сообщаемая через обратную связь расширения, проверяется для подавления изолированных скачков, но температурная защита двигателя по-прежнему использует необработанные показания датчика. Это означает, что кратковременное неправильное чтение может повлиять на защиту, даже если оно отфильтровано из обратной связи расширения.
 

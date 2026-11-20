@@ -45,7 +45,6 @@
 <a id="how-extension-mode-works"></a>
 ## كيف يعمل وضع التمديد
 
-[شاهد النبذة المسجلة على اليوتيوب](https://youtu.be/AsxFs24vXQs) | [MP4](../../../assets/readme/videos/overview.mp4)
 
 **المضيف** هو الكمبيوتر أو وحدة التحكم المتصلة بالماكينات. يرسل **الهدف**: الوجهة والحد الأقصى للسرعة. يتم تكوين إعدادات التسريع والتعويض قبل تمكين طاقة المحرك. كل مضاعفات ثم:
 
@@ -73,9 +72,7 @@
 <a id="s-curve-motion"></a>
 ## S-curve الحركة
 
-[![توضيح مفاهيمي لحركة s-curve](../../../assets/readme/illustrations/s-curve.png)](https://youtu.be/92mDt4rbobY)
 
-[شاهد على اليوتيوب](https://youtu.be/92mDt4rbobY) | [MP4](../../../assets/readme/videos/s-curve.mp4)
 
 يجعل التسارع والكبح أكثر تدرجًا. يوضح المنحنى التسارع مع مرور الوقت. التوضيح المفاهيمي، وليس بيانات الأجهزة المقاسة.
 
@@ -147,9 +144,7 @@ jerk = 1000 × acceleration / ramp_time_ms    [counts/s³]
 <a id="pid-controller"></a>
 ## PID تحكم
 
-[![توضيح مفاهيمي للتحكم في pid](../../../assets/readme/illustrations/pid-tuning.png)](https://youtu.be/TEpvaAMlfrg)
 
-[شاهد على اليوتيوب](https://youtu.be/TEpvaAMlfrg) | [MP4](../../../assets/readme/videos/pid-tuning.mp4)
 
 يضبط كيفية قيام المؤازرة بتصحيح خطأ الموضع. يوضح المنحنى الرمادي التذبذب. يوضح المنحنى الأبيض استجابة أكثر تثبيطًا. الخط المتقطع هو الهدف. التوضيح المفاهيمي، وليس بيانات الأجهزة المقاسة.
 
@@ -188,9 +183,7 @@ motor output = Kp × position error
 <a id="velocity-feedforward"></a>
 ## سرعة التغذية إلى الأمام
 
-[![توضيح مفاهيمي لسرعة التغذية للأمام](../../../assets/readme/illustrations/velocity-feedforward.png)](https://youtu.be/osGGs-nhk9I)
 
-[شاهد على اليوتيوب](https://youtu.be/osGGs-nhk9I) | [MP4](../../../assets/readme/videos/velocity-feedforward.mp4)
 
 يضيف خرج المحرك بناءً على السرعة المخططة، المحسوبة داخل المؤازرة. يتقدم كلا المنحنيين من اليسار إلى اليمين بمرور الوقت. التوضيح المفاهيمي، وليس بيانات الأجهزة المقاسة.
 
@@ -209,9 +202,7 @@ velocity feedforward = velocity gain × planned speed
 <a id="gravity-compensation"></a>
 ## تعويض الجاذبية
 
-[![توضيح مفاهيمي لتعويض الجاذبية](../../../assets/readme/illustrations/gravity-compensation.png)](https://youtu.be/25sc41PTDIA)
 
-[شاهد على اليوتيوب](https://youtu.be/25sc41PTDIA) | [MP4](../../../assets/readme/videos/gravity-compensation.mp4)
 
 يقوم المضيف بحساب المساهمة ويقوم المؤازرة بتطبيقها. يمثل السهم المتجه للأسفل الوزن؛ يمثل السهم التصاعدي الدعم. التوضيح المفاهيمي، وليس بيانات الأجهزة المقاسة.
 
@@ -517,9 +508,7 @@ make verify
 <a id="current-limits"></a>
 ## الحدود الحالية
 
-[![رد الفعل العكسي لعلبة التروس والإطار المرن](../../../assets/readme/posters/mechanical-limits.jpg)](https://youtu.be/53l7at5aE6k)
 
-[شاهد على اليوتيوب](https://youtu.be/53l7at5aE6k) | [MP4](../../../assets/readme/videos/mechanical-limits.mp4)
 
 يتم فحص درجة الحرارة المبلغ عنها من خلال ردود فعل الامتداد لمنع القفزات المعزولة، لكن حماية درجة حرارة المحرك لا تزال تستخدم قراءات المستشعر الأولية. وهذا يعني أن القراءة السيئة لفترة وجيزة يمكن أن تؤثر على الحماية حتى لو تمت تصفيتها من تعليقات الإضافات.
 

@@ -45,7 +45,6 @@
 <a id="how-extension-mode-works"></a>
 ## एक्सटेंशन मोड कैसे काम करता है
 
-[यूट्यूब](https://youtu.be/AsxFs24vXQs) पर रिकॉर्ड किया गया अवलोकन देखें | [MP4](../../../assets/readme/videos/overview.mp4)
 
 **होस्ट** सर्वो से जुड़ा कंप्यूटर या नियंत्रक है। यह एक **लक्ष्य** भेजता है: एक गंतव्य और गति सीमा। मोटर पावर को सक्षम करने से पहले त्वरण और क्षतिपूर्ति सेटिंग्स कॉन्फ़िगर की जाती हैं। प्रत्येक सर्वो तो:
 
@@ -73,9 +72,7 @@
 <a id="s-curve-motion"></a>
 ## S-curve गति
 
-[![s-curve गति](../../../assets/readme/illustrations/s-curve.png)](https://youtu.be/92mDt4rbobY) का वैचारिक चित्रण
 
-[यूट्यूब पर देखें](https://youtu.be/92mDt4rbobY) | [MP4](../../../assets/readme/videos/s-curve.mp4)
 
 त्वरण और ब्रेकिंग को अधिक क्रमिक बनाता है। वक्र समय के साथ त्वरण को दर्शाता है। वैचारिक चित्रण, मापा गया हार्डवेयर डेटा नहीं।
 
@@ -147,9 +144,7 @@ jerk = 1000 × acceleration / ramp_time_ms    [counts/s³]
 <a id="pid-controller"></a>
 ## PID नियंत्रक
 
-[![पिड नियंत्रण का वैचारिक चित्रण](../../../assets/readme/illustrations/pid-tuning.png)](https://youtu.be/TEpvaAMlfrg)
 
-[यूट्यूब पर देखें](https://youtu.be/TEpvaAMlfrg) | [MP4](../../../assets/readme/videos/pid-tuning.mp4)
 
 यह समायोजित करता है कि सर्वो स्थिति त्रुटि को कैसे ठीक करता है। ग्रे वक्र दोलन को दर्शाता है; सफ़ेद वक्र अधिक नम प्रतिक्रिया को दर्शाता है। धराशायी रेखा लक्ष्य है. वैचारिक चित्रण, मापा गया हार्डवेयर डेटा नहीं।
 
@@ -188,9 +183,7 @@ I योगदान की अपनी सीमा होती है। न
 <a id="velocity-feedforward"></a>
 ## वेग फ़ीडफ़ॉरवर्ड
 
-[![वेग फीडफॉरवर्ड का वैचारिक चित्रण](../../../assets/readme/illustrations/velocity-feedforward.png)](https://youtu.be/osGGs-nhk9I)
 
-[यूट्यूब पर देखें](https://youtu.be/osGGs-nhk9I) | [MP4](../../../assets/readme/videos/velocity-feedforward.mp4)
 
 सर्वो के अंदर गणना की गई नियोजित गति के आधार पर मोटर आउटपुट जोड़ता है। दोनों वक्र समय के साथ बाएं से दाएं की ओर बढ़ते हैं। वैचारिक चित्रण, मापा गया हार्डवेयर डेटा नहीं।
 
@@ -209,9 +202,7 @@ velocity feedforward = velocity gain × planned speed
 <a id="gravity-compensation"></a>
 ## गुरुत्वाकर्षण मुआवजा
 
-[![गुरुत्वाकर्षण मुआवजे का वैचारिक चित्रण](../../../assets/readme/illustrations/gravity-compensation.png)](https://youtu.be/25sc41PTDIA)
 
-[यूट्यूब पर देखें](https://youtu.be/25sc41PTDIA) | [MP4](../../../assets/readme/videos/gravity-compensation.mp4)
 
 मेजबान योगदान की गणना करता है और सर्वो इसे लागू करता है। नीचे की ओर तीर वजन का प्रतिनिधित्व करता है; ऊपर की ओर वाला तीर समर्थन का प्रतिनिधित्व करता है। वैचारिक चित्रण, मापा गया हार्डवेयर डेटा नहीं।
 
@@ -517,9 +508,7 @@ make verify
 <a id="current-limits"></a>
 ## वर्तमान सीमाएँ
 
-[![गियरबॉक्स बैकलैश और फ्रेम फ्लेक्स](../../../assets/readme/posters/mechanical-limits.jpg)](https://youtu.be/53l7at5aE6k)
 
-[यूट्यूब पर देखें](https://youtu.be/53l7at5aE6k) | [MP4](../../../assets/readme/videos/mechanical-limits.mp4)
 
 एक्सटेंशन फीडबैक के माध्यम से रिपोर्ट किए गए तापमान की जांच अलग-अलग उछाल को दबाने के लिए की जाती है, लेकिन मोटर की तापमान सुरक्षा अभी भी कच्चे सेंसर रीडिंग का उपयोग करती है। इसका मतलब यह है कि एक संक्षिप्त ख़राब रीडिंग सुरक्षा को प्रभावित कर सकती है, भले ही उसे एक्सटेंशन फीडबैक से फ़िल्टर कर दिया गया हो।
 

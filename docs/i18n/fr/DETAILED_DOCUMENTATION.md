@@ -45,7 +45,6 @@ L'extension utilise ses propres paramètres de mouvement et de contrôle. Les va
 <a id="how-extension-mode-works"></a>
 ## Comment fonctionne le mode extension
 
-[Regardez l'aperçu enregistré sur YouTube](https://youtu.be/AsxFs24vXQs) | [MP4](../../../assets/readme/videos/overview.mp4)
 
 Le **hôte** est l'ordinateur ou le contrôleur connecté aux servos. Il envoie une **cible** : une destination et une limite de vitesse. Les paramètres d'accélération et de compensation sont configurés avant d'activer la puissance du moteur. Chaque servo alors :
 
@@ -73,9 +72,7 @@ L'effort est exprimé en unités PWM, les unités utilisées pour contrôler la 
 <a id="s-curve-motion"></a>
 ## S-curve mouvement
 
-[![Illustration conceptuelle du mouvement s-curve](../../../assets/readme/illustrations/s-curve.png)](https://youtu.be/92mDt4rbobY)
 
-[Regarder sur YouTube](https://youtu.be/92mDt4rbobY) | [MP4](../../../assets/readme/videos/s-curve.mp4)
 
 Rend l'accélération et le freinage plus progressifs. La courbe illustre l'accélération dans le temps. Illustration conceptuelle, données matérielles non mesurées.
 
@@ -147,9 +144,7 @@ Ouvrez une image pour une vue plus grande. Suivez le [guide d'étalonnage](tools
 <a id="pid-controller"></a>
 ## PID contrôleur
 
-[![Illustration conceptuelle du contrôle pid](../../../assets/readme/illustrations/pid-tuning.png)](https://youtu.be/TEpvaAMlfrg)
 
-[Regarder sur YouTube](https://youtu.be/TEpvaAMlfrg) | [MP4](../../../assets/readme/videos/pid-tuning.mp4)
 
 Ajuste la façon dont le servo corrige l’erreur de position. La courbe grise illustre l'oscillation ; la courbe blanche illustre une réponse plus amortie. La ligne pointillée est la cible. Illustration conceptuelle, données matérielles non mesurées.
 
@@ -188,9 +183,7 @@ Lorsque le servo est presque immobile depuis au moins 50 ms et que l’erreur de
 <a id="velocity-feedforward"></a>
 ## Anticipation de vitesse
 
-[![Illustration conceptuelle du feedback de vitesse](../../../assets/readme/illustrations/velocity-feedforward.png)](https://youtu.be/osGGs-nhk9I)
 
-[Regarder sur YouTube](https://youtu.be/osGGs-nhk9I) | [MP4](../../../assets/readme/videos/velocity-feedforward.mp4)
 
 Ajoute la puissance du moteur en fonction de la vitesse prévue, calculée à l'intérieur du servo. Les deux courbes progressent de gauche à droite au fil du temps. Illustration conceptuelle, données matérielles non mesurées.
 
@@ -209,9 +202,7 @@ Configurez cette fonctionnalité avec les autres paramètres dans `0xA0`, lorsqu
 <a id="gravity-compensation"></a>
 ## Compensation de gravité
 
-[![Illustration conceptuelle de la compensation gravitationnelle](../../../assets/readme/illustrations/gravity-compensation.png)](https://youtu.be/25sc41PTDIA)
 
-[Regarder sur YouTube](https://youtu.be/25sc41PTDIA) | [MP4](../../../assets/readme/videos/gravity-compensation.mp4)
 
 L'hôte calcule la contribution et le servo l'applique. La flèche vers le bas représente le poids ; la flèche vers le haut représente le support. Illustration conceptuelle, données matérielles non mesurées.
 
@@ -517,9 +508,7 @@ Pour les détails d'implémentation, consultez les [commandes d'extension](../..
 <a id="current-limits"></a>
 ## Limites actuelles
 
-[![Jeu de boîte de vitesses et flexion du cadre](../../../assets/readme/posters/mechanical-limits.jpg)](https://youtu.be/53l7at5aE6k)
 
-[Regarder sur YouTube](https://youtu.be/53l7at5aE6k) | [MP4](../../../assets/readme/videos/mechanical-limits.mp4)
 
 La température signalée via le retour d'extension est vérifiée pour supprimer les sauts isolés, mais la protection thermique du moteur utilise toujours les lectures brutes du capteur. Cela signifie qu'une brève mauvaise lecture peut affecter la protection même si elle est filtrée du retour d'extension.
 

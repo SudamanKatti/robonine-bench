@@ -45,7 +45,6 @@ GD32F130-based STS3215舵机固件，有两种控制电机的方式：
 <a id="how-extension-mode-works"></a>
 ## 扩展模式如何工作
 
-[在 YouTube 上观看录制的概述](https://youtu.be/AsxFs24vXQs) | [MP4](../../../assets/readme/videos/overview.mp4)
 
 **主机**是连接到伺服系统的计算机或控制器。它发送一个**目标**：目的地和速度限制。加速度和补偿设置在启用电机电源之前配置。每个舵机则：
 
@@ -73,9 +72,7 @@ GD32F130-based STS3215舵机固件，有两种控制电机的方式：
 <a id="s-curve-motion"></a>
 ## S-curve运动
 
-[![s-curve运动](../../../assets/readme/illustrations/s-curve.png)](https://youtu.be/92mDt4rbobY)的概念图
 
-[在 YouTube 上观看](https://youtu.be/92mDt4rbobY) | [MP4](../../../assets/readme/videos/s-curve.mp4)
 
 使加速和制动更加平缓。该曲线说明了随时间变化的加速度。概念图，不是测量的硬件数据。
 
@@ -147,9 +144,7 @@ jerk = 1000 × acceleration / ramp_time_ms    [counts/s³]
 <a id="pid-controller"></a>
 ## PID控制器
 
-[![pid控制概念图](../../../assets/readme/illustrations/pid-tuning.png)](https://youtu.be/TEpvaAMlfrg)
 
-[在 YouTube 上观看](https://youtu.be/TEpvaAMlfrg) | [MP4](../../../assets/readme/videos/pid-tuning.mp4)
 
 调整伺服系统纠正位置误差的方式。灰色曲线表示振荡；白色曲线说明了更阻尼的响应。虚线是目标。概念图，不是测量的硬件数据。
 
@@ -188,9 +183,7 @@ I 的贡献有其自身的局限性。控制器还可以防止其继续沿着电
 <a id="velocity-feedforward"></a>
 ## 速度前馈
 
-[![速度前馈的概念图](../../../assets/readme/illustrations/velocity-feedforward.png)](https://youtu.be/osGGs-nhk9I)
 
-[在 YouTube 上观看](https://youtu.be/osGGs-nhk9I) | [MP4](../../../assets/readme/videos/velocity-feedforward.mp4)
 
 根据伺服系统内部计算的计划速度添加电机输出。两条曲线随着时间的推移从左向右发展。概念图，不是测量的硬件数据。
 
@@ -209,9 +202,7 @@ velocity feedforward = velocity gain × planned speed
 <a id="gravity-compensation"></a>
 ## 重力补偿
 
-[![重力补偿概念图](../../../assets/readme/illustrations/gravity-compensation.png)](https://youtu.be/25sc41PTDIA)
 
-[在 YouTube 上观看](https://youtu.be/25sc41PTDIA) | [MP4](../../../assets/readme/videos/gravity-compensation.mp4)
 
 主机计算贡献，伺服电机应用它。向下的箭头代表重量；向上的箭头代表支撑。概念图，不是测量的硬件数据。
 
@@ -517,9 +508,7 @@ make verify
 <a id="current-limits"></a>
 ## 当前限制
 
-[![变速箱间隙和车架弯曲](../../../assets/readme/posters/mechanical-limits.jpg)](https://youtu.be/53l7at5aE6k)
 
-[在 YouTube 上观看](https://youtu.be/53l7at5aE6k) | [MP4](../../../assets/readme/videos/mechanical-limits.mp4)
 
 检查通过扩展反馈报告的温度以抑制孤立跳变，但电机的温度保护仍然使用原始传感器读数。这意味着即使从扩展反馈中过滤掉短暂的错误读数也会影响保护。
 
