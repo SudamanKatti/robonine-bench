@@ -18,6 +18,9 @@ CFLAGS := -std=c11 -Wall -Wextra -Werror -Os -flto -mcpu=cortex-m3 -mthumb \
   -ffreestanding -fno-builtin -ffunction-sections -fdata-sections -MMD -MP -Iinclude -Iapp -Iplatform/gd32f130 \
   -Iplatform/gd32f130/vendor/CMSIS -Iplatform/gd32f130/vendor/SPL/Include
 HOST_CFLAGS := -std=c11 -Wall -Wextra -Werror -O2 -fsanitize=address,undefined -Iinclude -Iapp -Iplatform/gd32f130
+ifeq ($(ARM_ADAPT_MOTION),1)
+CFLAGS += -DARM_ADAPT_MOTION
+endif
 HOST_DEPFLAGS := -std=c11 -MM -MP -Iinclude -Iapp -Iplatform/gd32f130
 LDFLAGS := -nostdlib -Wl,--gc-sections -Wl,-Map,$(FIRMWARE_DIR)/firmware.map \
   -T platform/gd32f130/linker.ld

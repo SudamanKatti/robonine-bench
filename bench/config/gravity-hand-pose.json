@@ -1,0 +1,1 @@
+{"format": "sts-poses", "version": 1, "units": "encoder-counts", "ids": [1], "readMode": "sequential", "poses": [{"name": "current", "position": 2240, "positions": {"1": 2240}, "durationMs": 0, "capturedAt": "2026-11-20T01:05:17.650835+00:00"}]}

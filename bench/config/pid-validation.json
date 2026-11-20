@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "name": "pid-validation",
+  "config": "controller.json",
+  "stage": "pid",
+  "probeId": 1,
+  "poses": {
+    "screen": [
+      [
+        4080,
+        3568
+      ]
+    ],
+    "validate": [
+      [
+        4040,
+        3608
+      ]
+    ]
+  },
+  "motion": {
+    "speeds": [
+      100
+    ],
+    "moveTimeoutMs": 12000
+  },
+  "batch": {
+    "screenRepeats": 2,
+    "validateRepeats": 2,
+    "screenHoldMs": 2000,
+    "validateHoldMs": 3000,
+    "finalists": 1,
+    "maxDurationMs": 300000,
+    "driftRatio": 0.25
+  },
+  "sampling": {
+    "intervalMs": 50,
+    "maxGapMs": 200
+  },
+  "limits": {
+    "followingError": 100,
+    "supportError": 50,
+    "maxTemperature": 55,
+    "minVoltageRaw": 100,
+    "maxVoltageRaw": 140
+  },
+  "acceptance": {
+    "trackingRms": 10,
+    "holdError": 10,
+    "holdSpan": 5,
+    "overshoot": 10,
+    "settlingMs": 1000,
+    "responseMs": 7500,
+    "saturationFraction": 0.05,
+    "settleBand": 10,
+    "settleDwellMs": 300
+  },
+  "candidates": [
+    {
+      "changes": {
+        "kdQ8": 128,
+        "kpQ8": 1280
+      },
+      "name": "PD-1280-128"
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "format": "sts-gravity",
+  "version": 1,
+  "units": "pwm-effort",
+  "name": "SO-101 coupled gravity with two measured joints and a rigid tip",
+  "calibration": "Encoder settings read from both connected servos. Physical joint zero and direction still require verification.",
+  "mounting": "Servo IDs 1 and 2 map to SO-101 joints 2 and 3. The tip is a straight rigid extension with zero relative bend.",
+  "payload": "Uses upstream SO-101 empty-gripper coefficients.",
+  "encoderCalibration": {
+    "1": {
+      "positionCorrection": 85,
+      "resolution": 1,
+      "reverse": false
+    },
+    "2": {
+      "positionCorrection": 85,
+      "resolution": 1,
+      "reverse": false
+    }
+  },
+  "models": {
+    "1": {
+      "maxEffort": 1000,
+      "note": "Upstream joint 2 effort with a fixed tip.",
+      "terms": [
+        {
+          "fn": "sin",
+          "weights": {
+            "1": -0.0015339807878856412
+          },
+          "offsetRad": 0,
+          "coefficient": -76.7123370224705
+        },
+        {
+          "fn": "cos",
+          "weights": {
+            "1": -0.0015339807878856412
+          },
+          "offsetRad": 0,
+          "coefficient": 2.8611263163499925
+        },
+        {
+          "fn": "sin",
+          "weights": {
+            "1": -0.0015339807878856412,
+            "2": -0.0015339807878856412
+          },
+          "offsetRad": 0,
+          "coefficient": 10.95198803026078
+        },
+        {
+          "fn": "cos",
+          "weights": {
+            "1": -0.0015339807878856412,
+            "2": -0.0015339807878856412
+          },
+          "offsetRad": 0,
+          "coefficient": -64.0460212778379
+        },
+        {
+          "fn": "sin",
+          "weights": {
+            "1": -0.0015339807878856412,
+            "2": -0.0015339807878856412
+          },
+          "offsetRad": 0,
+          "coefficient": 2.9770598900165264
+        },
+        {
+          "fn": "cos",
+          "weights": {
+            "1": -0.0015339807878856412,
+            "2": -0.0015339807878856412
+          },
+          "offsetRad": 0,
+          "coefficient": 17.423772688089088
+        }
+      ]
+    },
+    "2": {
+      "maxEffort": 1000,
+      "note": "Upstream joint 3 effort with a fixed tip.",
+      "terms": [
+        {
+          "fn": "sin",
+          "weights": {
+            "1": -0.0015339807878856412,
+            "2": -0.0015339807878856412
+          },
+          "offsetRad": 0,
+          "coefficient": 2.534308907472532
+        },
+        {
+          "fn": "cos",
+          "weights": {
+            "1": -0.0015339807878856412,
+            "2": -0.0015339807878856412
+          },
+          "offsetRad": 0,
+          "coefficient": -57.20789582684867
+        },
+        {
+          "fn": "sin",
+          "weights": {
+            "1": -0.0015339807878856412,
+            "2": -0.0015339807878856412
+          },
+          "offsetRad": 0,
+          "coefficient": 1.4776839652192695
+        },
+        {
+          "fn": "cos",
+          "weights": {
+            "1": -0.0015339807878856412,
+            "2": -0.0015339807878856412
+          },
+          "offsetRad": 0,
+          "coefficient": 18.30290690113217
+        }
+      ]
+    }
+  }
+}

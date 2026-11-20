@@ -1,0 +1,18 @@
+{
+  "format": "sts-gd32-encoded-v1",
+  "release": "local-e44c0e6",
+  "image": "firmware.enc",
+  "size": 25744,
+  "sha256": "71b406a2166a9dec8c02b9daa3c67648c52f045ef03c9cfb80134a0bfa68e003",
+  "target": "gd32f130-sts-ttl",
+  "model_bytes": [
+    [
+      9,
+      3
+    ]
+  ],
+  "extension": {
+    "major": 9,
+    "minor": 0
+  }
+}

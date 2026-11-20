@@ -1,0 +1,31 @@
+{
+  "followerPort": "COM6",
+  "baudRate": 1000000,
+  "maxAgeMs": 100,
+  "acceleration": 100,
+  "rampTimeMs": 250,
+  "profiles": {
+    "1": {
+      "kpQ8": 0,
+      "kdQ8": 0,
+      "kiQ8": 0,
+      "integralLimit": 0,
+      "effortLimit": 100,
+      "velocityLimit": 500,
+      "velocityFilterQ8": 64,
+      "gravitySlewEffortPerS": 1000,
+      "velocityFeedforward": {
+        "positiveGainQ8": 0,
+        "negativeGainQ8": 0,
+        "effortLimit": 0
+      }
+    }
+  },
+  "gravityModel": "tip-gravity-fitted.json",
+  "replay": {
+    "speed": 50,
+    "holdMs": 600000,
+    "moveTimeoutMs": 18000,
+    "toleranceCounts": 500
+  }
+}

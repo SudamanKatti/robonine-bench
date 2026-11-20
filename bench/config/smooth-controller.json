@@ -1,0 +1,15 @@
+{
+  "followerPort": "COM6",
+  "baudRate": 1000000,
+  "maxAgeMs": 100,
+  "acceleration": 250,
+  "rampTimeMs": 250,
+  "joints": [
+    {
+      "followerId": 1
+    }
+  ],
+  "profiles": {
+    "1": "two-count-profile.json"
+  }
+}

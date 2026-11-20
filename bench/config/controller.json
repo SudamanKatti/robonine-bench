@@ -1,0 +1,15 @@
+{
+  "followerPort": "COM6",
+  "baudRate": 1000000,
+  "maxAgeMs": 100,
+  "acceleration": 1000,
+  "rampTimeMs": 50,
+  "joints": [
+    {
+      "followerId": 1
+    }
+  ],
+  "profiles": {
+    "1": "../repo/host/arm-control/profile.example.json"
+  }
+}

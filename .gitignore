@@ -43,3 +43,7 @@ __pycache__/
 
 # Regression fixtures are required test inputs.
 !firmware/tests/fixtures/**
+
+# Local bench dependencies and per-servo backups
+.bench-venv/
+bench-local/

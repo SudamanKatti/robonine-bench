@@ -1,0 +1,51 @@
+{
+  "format": "sts-poses",
+  "version": 1,
+  "units": "encoder-counts",
+  "ids": [
+    1
+  ],
+  "readMode": "sequential",
+  "poses": [
+    {
+      "name": "pose-0",
+      "positions": {
+        "1": 2019
+      },
+      "capturedAt": "2026-11-19T02:09:38.7345182Z",
+      "durationMs": 0
+    },
+    {
+      "name": "pose-1",
+      "positions": {
+        "1": 3043
+      },
+      "capturedAt": "2026-11-19T02:09:38.7548452Z",
+      "durationMs": 0
+    },
+    {
+      "name": "pose-2",
+      "positions": {
+        "1": 2019
+      },
+      "capturedAt": "2026-11-19T02:09:38.7552263Z",
+      "durationMs": 0
+    },
+    {
+      "name": "pose-3",
+      "positions": {
+        "1": 3043
+      },
+      "capturedAt": "2026-11-19T02:09:38.7555528Z",
+      "durationMs": 0
+    },
+    {
+      "name": "pose-4",
+      "positions": {
+        "1": 2019
+      },
+      "capturedAt": "2026-11-19T02:09:38.7558916Z",
+      "durationMs": 0
+    }
+  ]
+}

@@ -480,6 +480,35 @@ bool arm_motion_target(arm_motion_t *motion, int32_t target_q8,
     plan.acceleration_limit = acceleration;
     plan.cursor = 0;
     plan.goal = goal;
+#ifdef ARM_ADAPT_MOTION
+    if (arm_motion_idle(motion)) {
+        /* For a rest-to-rest move, use the acceleration needed to reach
+         * cruise in the first quarter of the available distance, ignoring
+         * jerk. The regular planner accounts for jerk and short moves.
+         * Live retargets retain the configured envelope for braking. */
+        uint32_t distance_q8 = (uint32_t)magnitude(
+            (int64_t)target_q8 - arm_motion_position(motion));
+        if (distance_q8) {
+            uint64_t needed = divide_u64_u32(
+                512u * (uint64_t)speed * speed + distance_q8 - 1u,
+                distance_q8);
+            if (needed < acceleration) {
+                plan.acceleration_limit = needed ? (uint16_t)needed : 1u;
+                if (prepare_target(&plan, ends, ramp_ms, lower_q8, upper_q8) &&
+                    valid(&plan, ends, lower_q8, upper_q8)) {
+                    plan.acceleration_limit = acceleration;
+                    *motion = plan;
+                    return true;
+                }
+                plan = *motion;
+                plan.speed_limit = speed;
+                plan.acceleration_limit = acceleration;
+                plan.cursor = 0;
+                plan.goal = goal;
+            }
+        }
+    }
+#endif
     if (!prepare_target(&plan, ends, ramp_ms, lower_q8, upper_q8) ||
         !valid(&plan, ends, lower_q8, upper_q8)) return false;
     *motion = plan;

@@ -1,0 +1,59 @@
+{
+  "version": 2,
+  "name": "tip-motor-matched",
+  "config": "loaded-fitted-fast-controller.json",
+  "stage": "baseline",
+  "probeId": 1,
+  "poses": {
+    "screen": [
+      [
+        1936,
+        2960
+      ]
+    ],
+    "validate": [
+      [
+        2050,
+        2850
+      ]
+    ]
+  },
+  "motion": {
+    "speeds": [
+      250
+    ],
+    "moveTimeoutMs": 18000
+  },
+  "batch": {
+    "screenRepeats": 2,
+    "validateRepeats": 2,
+    "screenHoldMs": 3000,
+    "validateHoldMs": 4000,
+    "finalists": 1,
+    "maxDurationMs": 300000,
+    "driftRatio": 0.25
+  },
+  "sampling": {
+    "intervalMs": 50,
+    "maxGapMs": 200
+  },
+  "limits": {
+    "followingError": 100,
+    "supportError": 50,
+    "maxTemperature": 55,
+    "minVoltageRaw": 100,
+    "maxVoltageRaw": 140
+  },
+  "acceptance": {
+    "trackingRms": 10,
+    "holdError": 2,
+    "holdSpan": 5,
+    "overshoot": 10,
+    "settlingMs": 1000,
+    "responseMs": 7500,
+    "saturationFraction": 0.05,
+    "settleBand": 10,
+    "settleDwellMs": 300
+  },
+  "candidates": []
+}

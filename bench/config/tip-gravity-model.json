@@ -1,0 +1,32 @@
+{
+  "format": "sts-gravity",
+  "version": 1,
+  "units": "pwm-effort",
+  "name": "tip motor identification",
+  "calibration": "Horizontal reference 3043 counts",
+  "mounting": "Horizontal shaft, vertical motion plane",
+  "payload": "ST-3215-C018 at tip",
+  "encoderCalibration": {
+    "1": {
+      "positionCorrection": 85,
+      "resolution": 1,
+      "reverse": false
+    }
+  },
+  "models": {
+    "1": {
+      "maxEffort": 20,
+      "note": "Zero initial coefficient for identification",
+      "terms": [
+        {
+          "fn": "cos",
+          "coefficient": 0,
+          "offsetRad": -4.667903537536006,
+          "weights": {
+            "1": 0.0015339807878856412
+          }
+        }
+      ]
+    }
+  }
+}

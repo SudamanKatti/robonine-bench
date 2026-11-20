@@ -1,0 +1,60 @@
+{
+  "version": 2,
+  "name": "horizontal-payload-calibration",
+  "config": "tip-gravity-deadline-controller.json",
+  "stage": "gravity",
+  "probeId": 1,
+  "poses": {
+    "screen": [
+      [
+        2019,
+        3043
+      ]
+    ],
+    "validate": [
+      [
+        2099,
+        2963
+      ]
+    ]
+  },
+  "motion": {
+    "speeds": [
+      100,
+      140
+    ],
+    "moveTimeoutMs": 22000
+  },
+  "batch": {
+    "screenRepeats": 2,
+    "validateRepeats": 2,
+    "screenHoldMs": 3000,
+    "validateHoldMs": 4000,
+    "finalists": 1,
+    "maxDurationMs": 600000,
+    "driftRatio": 0.25
+  },
+  "sampling": {
+    "intervalMs": 25,
+    "maxGapMs": 200
+  },
+  "limits": {
+    "followingError": 100,
+    "supportError": 50,
+    "maxTemperature": 55,
+    "minVoltageRaw": 100,
+    "maxVoltageRaw": 140
+  },
+  "acceptance": {
+    "trackingRms": 10,
+    "holdError": 2,
+    "holdSpan": 5,
+    "overshoot": 10,
+    "settlingMs": 1000,
+    "responseMs": 7500,
+    "saturationFraction": 0.05,
+    "settleBand": 10,
+    "settleDwellMs": 300
+  },
+  "candidates": []
+}

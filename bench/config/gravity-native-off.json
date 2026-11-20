@@ -1,0 +1,18 @@
+{
+  "followerPort": "COM6",
+  "baudRate": 1000000,
+  "maxAgeMs": 100,
+  "acceleration": 150,
+  "rampTimeMs": 250,
+  "profiles": {
+    "1": "loaded-fitted-profile.json"
+  },
+  "responseTimeoutMs": 40,
+  "replay": {
+    "speed": 145,
+    "holdMs": 500,
+    "repeat": 1,
+    "moveTimeoutMs": 16000,
+    "toleranceCounts": 5
+  }
+}
