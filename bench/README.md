@@ -47,3 +47,22 @@ uses zero PID gains for hand-guided testing. The [fixed-tip model](config/so101-
 assumes a straight rigid tip and needs physical alignment and load validation
 before use on a different mechanism. The live harness is
 [scripts/two-joint-gravity-live.cjs](scripts/two-joint-gravity-live.cjs).
+
+## Single-motor ring trial
+
+Robonine v9.0 on ID 2 moved 2,909 → 2,961 → 2,909 at 45 counts/s with
+the same PID settings. The load was a half-pound ring attached to the
+original printed test arm. Each column shows one run.
+
+| Metric (encoder counts) | Gravity comp off | Gravity comp on |
+|---|---:|---:|
+| Lift tracking RMS error | 9.33 | 7.05 |
+| Lift settled error | 9 | 3 |
+| Return tracking RMS error | 6.51 | 8.84 |
+| Return settled error | 4 | 4 |
+
+The [provisional ring model](config/gravity-half-pound-ring-model.json)
+uses a 2,904-count horizontal reference and approximately 29 PWM effort
+units from three paired measurements near one angle. Recalibrate after
+changing the load or mounting. The [trial script](scripts/ring-directional-ab.cjs)
+commands motion and assumes the tested COM6 fixture, motor ID and clear travel.

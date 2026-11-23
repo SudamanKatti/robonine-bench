@@ -1,0 +1,14 @@
+{
+  "motorId": 2,
+  "port": "COM6",
+  "horizontalCounts": 2904,
+  "direction": 1,
+  "pwmPerNm": null,
+  "massKg": 0.232836185,
+  "centerMm": null,
+  "encoderCalibration": {
+    "positionCorrection": 85,
+    "resolution": 1,
+    "reverse": false
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "format": "sts-gravity",
+  "version": 1,
+  "units": "pwm-effort",
+  "name": "ID 2 half-pound ring",
+  "calibration": "Provisional estimate from three repeated matched-motion samples near one angle",
+  "mounting": "Single horizontal shaft",
+  "payload": "Half-pound ring on printed arm",
+  "encoderCalibration": {
+    "2": {
+      "positionCorrection": 85,
+      "resolution": 1,
+      "reverse": false
+    }
+  },
+  "models": {
+    "2": {
+      "maxEffort": 100,
+      "note": "Positive compensation lifts ring.",
+      "terms": [
+        {
+          "fn": "cos",
+          "weights": {
+            "2": 0.0015339807878856412
+          },
+          "offsetRad": -4.454680208019902,
+          "coefficient": 29.048047363655996
+        }
+      ]
+    }
+  }
+}
