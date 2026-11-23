@@ -59,7 +59,6 @@ original printed test arm. Each column shows one run.
 | Lift tracking RMS error | 9.33 | 7.05 |
 | Lift settled error | 9 | 3 |
 | Return tracking RMS error | 6.51 | 8.84 |
-| Return settled error | 4 | 4 |
 
 The [provisional ring model](config/gravity-half-pound-ring-model.json)
 uses a 2,904-count horizontal reference and approximately 29 PWM effort
